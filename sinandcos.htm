@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<canvas width="512" height="256" id="cnv"></canvas>
+</body>
+</html>
+<script>
+cnv = document.getElementById("cnv");
+ctx = cnv.getContext('2d');
+coordY = 30;
+speedY = 1;
+speedX = 4;
+x = 0;
+color = "blue";
+var timer;
+function draw() {
+y = 1+coordY+10*Math.cos(x / speedX);
+x++;
+if (x > 512) {
+x = 0;
+coordY = coordY-(-speedY);
+}
+//ctx.clearRect(0,0, cnv.width, cnv.height);
+ctx.fillStyle = color;
+ctx.fillRect(x, y, 1,1);
+ctx.fill();
+timer = setTimeout(draw, 10)
+}
+draw();
+</script>

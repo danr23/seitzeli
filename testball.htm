@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+ <div class="CanvasContainer">
+    <canvas id="drawingCanvas" width="500" height="340"></canvas>
+</div>
+<div>
+    <button onclick="addBall()">Добавить мячик</button>
+    <button onclick="clearBalls()">Очистить холст</button>
+</div>
+<div>
+     Размер мячика:<input id="ballSize" type="number" min="0" max="100" value="15">
+    <input id="connectedBalls" type="checkbox">Добавить соединяющие линии<br>
+    <select id="person">
+    <option value="seit.jpeg">Seit</option>
+    <option value="zel.jpeg">Zel</option>
+    </select>
+    Скорость: <input id="speed" type="number" min="1" max="150" value="1"></input>
+</div>
+
+</body>
+</html>
+<script src="testball.js"></script>
